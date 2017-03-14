@@ -11,7 +11,9 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-  //  TextView textView = (TextView) findViewById(R.id.text1);
+    TextView date;
+    String date_s;
+    String date_saved;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,16 +21,45 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        String year = intent.getStringExtra("year");
-        String month = intent.getStringExtra("month");
-        TextView txt = (TextView) findViewById(R.id.text1);
-        if (year != null)
-            txt.setText(month);
+        String name_s = intent.getStringExtra("name");
+        String surname_s = intent.getStringExtra("surname");
+        String date_s = intent.getStringExtra("date");
+        if(name_s != null && surname_s != null && date_s != null) {
+
+            TextView name = (TextView) findViewById(R.id.name);
+            TextView surname = (TextView) findViewById(R.id.surname);
+            TextView date = (TextView) findViewById(R.id.text1);
+
+            name.setText(name_s);
+            surname.setText(surname_s);
+            date.setText(date_s);
+
+        }
 
     }
 
- //////   public void onCLick(View v) {
- //       if(v.getId() == R.id.text1)
- //        dlg.show(getFragmentManager(), "dlg");
- //   }
+
+
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+
+        date = (TextView) findViewById(R.id.text1);
+        savedInstanceState.putString("Date_saved", date.getText().toString());
+
+        super.onSaveInstanceState(savedInstanceState);
+    }
+
+//onRestoreInstanceState
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+
+        super.onRestoreInstanceState(savedInstanceState);
+      TextView date = (TextView) findViewById(R.id.text1);
+       date_saved = savedInstanceState.getString("Date_saved");
+
+           date.setText(date_saved);
+
+
+    }
+
 }

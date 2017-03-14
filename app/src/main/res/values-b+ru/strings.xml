@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Домашняя работа №1</string>
+    <string name="btn_save">Сохранить</string>
+    <string name="btn_edit">Редактировать</string>
+    <string name="hint_name">Введите имя</string>
+    <string name="hint_surname">Введите фамилию</string>
+</resources>

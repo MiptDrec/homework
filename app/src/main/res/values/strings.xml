@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Homework</string>
+    <string name="app_name">Homework №1</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_edit">Edit</string>
+    <string name="hint_name">Type a name</string>
+    <string name="hint_surname">Type a surname</string>
 </resources>

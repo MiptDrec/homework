@@ -5,32 +5,38 @@
 <EditText
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Type your name"
+    android:text=""
+    android:hint="@string/hint_name"
     android:id="@+id/name"
     android:layout_gravity="center"
-    android:layout_marginTop="50dp"/>
+    android:layout_marginTop="50dp"
+  />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Type your surname"
+        android:text=""
         android:id="@+id/surname"
+        android:hint="@string/hint_surname"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Data"
+        android:text=""
+        android:hint="Data"
         android:id="@+id/text1"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+                    />
 
 
     <Button
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Save"
+        android:text="@string/btn_save"
         android:id="@+id/btn"
         android:layout_gravity="center"
         android:clickable="false"
